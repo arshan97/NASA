@@ -1,7 +1,7 @@
 const DEFAULT_PAGE = 1;
 const  DEFAULT_LIMIT = 0;
 
-export function getPagination(query) {
+function getPagination(query) {
     const limit = Math.abs(query.limit) || DEFAULT_LIMIT;
     const page = Math.abs(query.page) || DEFAULT_PAGE;
     const skip = (page - 1) * limit;
@@ -11,3 +11,5 @@ export function getPagination(query) {
         limit
     }
 }
+
+module.exports = getPagination;
