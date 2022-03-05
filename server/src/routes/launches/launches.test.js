@@ -2,8 +2,6 @@ const request = require("supertest");
 const app = require("../../app");
 const { mongoConnect, mongoDisconnect } = require("../../services/mongo");
 
-jest.useFakeTimers();
-
 describe('Launches API', () => { 
 
   beforeAll(async () => {
